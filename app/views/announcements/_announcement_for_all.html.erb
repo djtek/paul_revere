@@ -1,6 +1,6 @@
 <% if current_announcement.exists? && !announcement_hidden?(current_announcement) %>
   <div id="<%= dom_id(current_announcement) %>">
-    <span><%= current_announcement.body.html_safe %></span>
+    <p><%= current_announcement.body.html_safe %></p>
     <span class="close">
       <%= link_to_function "hide", "hideAnnouncement('#{dom_id(current_announcement)}')" %>
     </span>
