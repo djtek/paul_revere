@@ -1,6 +1,6 @@
-function hideAnnouncement(announcement_created_at) {
-  createCookie(announcement_created_at, 'hidden', 365);
-  $("#announcement").slideUp();
+function hideAnnouncement(key) {
+  createCookie(key, 'hidden', 365);
+  $("#" + key).slideUp();
 }
 
 // http://www.quirksmode.org/js/cookies.html
