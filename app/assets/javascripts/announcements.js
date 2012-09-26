@@ -1,6 +1,11 @@
 function hideAnnouncement(key) {
   createCookie(key, 'hidden', 365);
-  $("#" + key).slideUp();
+  var dom = $("#" + key);
+  if (dom.parent().children().size() <= 1) {
+    dom.parent().slideUp();
+  } else {
+    dom.slideUp();
+  };
 }
 
 // http://www.quirksmode.org/js/cookies.html
