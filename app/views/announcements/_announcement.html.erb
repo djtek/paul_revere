@@ -1,5 +1,5 @@
 <%- if announcement.exists? && !announcement_hidden?(announcement) %>
-  <div id="<%= dom_id(announcement) %>">
+  <div id="<%= dom_id(announcement) %>" class='announcement'>
   	<%= simple_format announcement.body.html_safe %>
     <%= link_to_function "<i class='icon-remove'></i>".html_safe, "hideAnnouncement('#{dom_id(announcement)}')", :class => 'close' %>
   </div>
